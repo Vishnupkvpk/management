@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @expense.category_id %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @expense.amount %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @expense.description %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @expense.date %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @expense.user_id %>
+</p>
+<% if can? :update,@expense%>
+<%= link_to 'Edit', edit_expense_path(@expense) %> |
+<%end%>
+<%= link_to 'Back', expenses_path %>

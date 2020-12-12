@@ -1,0 +1,18 @@
+<% if !user_signed_in?%>
+<p>
+  <strong>new user sign up for accessing expense management system: </strong>
+    <%= link_to  "Sign-up",   new_user_registration_path ,class:"btn pl-500"%>
+</p>
+<p>
+  <strong>already a user login in: </strong>
+    <%= link_to  "log-in",   user_session_path,class:"btn pl-500" %>
+</p>
+<%else%>
+<div class="jumbotron mt-5">
+  <h1 class="display-2">Welcome to expense management app </h1>
+ 
+</p>
+</div>
+
+<%end%>
+
