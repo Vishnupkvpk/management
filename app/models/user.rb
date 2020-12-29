@@ -3,13 +3,14 @@ class User < ApplicationRecord # :confirmable, :lockable, :timeoutable, :trackab
          :registerable,
          :recoverable,
          :rememberable,
-         :validatable,
-         :confirmable
+         :validatable
+
   has_many :incomes
   has_many :expenses
   def welcome_email
     UserMailer.welcome_email(self).deliver
   end
+
   def admin?
     admin
   end
